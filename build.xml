@@ -16,7 +16,7 @@
   <target name="dist" depends="compile" description="generate the distribution">
     <mkdir dir="${dist}"/>
  
-    <jar jarfile="${dist}/ContactManager-${DSTAMP}.jar" basedir="${build}">
+    <jar jarfile="${dist}/test-${DSTAMP}.jar" basedir="${build}">
             <manifest>
                 <attribute name="Main-Class" value="test.Test"/>
             </manifest>   
