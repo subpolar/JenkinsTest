@@ -16,6 +16,15 @@ repositories {
     }
 }
 
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.runtimeClasspath.collect { it.getName() }.join(' '),
+      'Main-Class': 'test.Test'
+    )
+  }
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
